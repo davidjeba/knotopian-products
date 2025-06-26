@@ -1,8 +1,8 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { ArrowRight, CheckCircle, Users, TrendingUp, Clock, Target, BookOpen, Zap, Shield, Globe } from "lucide-react";
 
 const Index = () => {
@@ -27,6 +27,24 @@ const Index = () => {
     "Role-Specific Simulations", 
     "Modular Format Integration",
     "Instant Enterprise Deployment"
+  ];
+
+  const knowallyClients = [
+    { name: "TechCorp", logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop" },
+    { name: "HealthPlus", logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=120&h=60&fit=crop" },
+    { name: "EduSphere", logo: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=120&h=60&fit=crop" },
+    { name: "RetailMax", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=120&h=60&fit=crop" },
+    { name: "FinanceFlow", logo: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=120&h=60&fit=crop" },
+    { name: "ManufactureCo", logo: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=120&h=60&fit=crop" }
+  ];
+
+  const industryClients = [
+    { name: "MedTech Solutions", logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=120&h=60&fit=crop" },
+    { name: "Auto Dynamics", logo: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=120&h=60&fit=crop" },
+    { name: "Hospitality Group", logo: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=120&h=60&fit=crop" },
+    { name: "Energy Corp", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=120&h=60&fit=crop" },
+    { name: "Construction Plus", logo: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=120&h=60&fit=crop" },
+    { name: "Banking Solutions", logo: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=120&h=60&fit=crop" }
   ];
 
   return (
@@ -116,6 +134,26 @@ const Index = () => {
               </div>
             </div>
           </div>
+
+          {/* Knowally Clients Section */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-semibold text-center mb-8 text-slate-800">Clients using Knowally</h3>
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {knowallyClients.map((client, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 md:basis-1/4 lg:basis-1/6">
+                    <div className="flex items-center justify-center p-4 bg-slate-50 rounded-lg border hover:shadow-md transition-shadow">
+                      <img 
+                        src={client.logo} 
+                        alt={client.name}
+                        className="max-w-full max-h-12 object-contain grayscale hover:grayscale-0 transition-all"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
+          </div>
         </div>
       </section>
 
@@ -178,6 +216,26 @@ const Index = () => {
                 Explore Course Library <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
+          </div>
+
+          {/* Industry Courses Clients Section */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-semibold text-center mb-8 text-slate-800">Clients using Industry Ready Courses</h3>
+            <Carousel className="w-full max-w-5xl mx-auto">
+              <CarouselContent className="-ml-2 md:-ml-4">
+                {industryClients.map((client, index) => (
+                  <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/3 md:basis-1/4 lg:basis-1/6">
+                    <div className="flex items-center justify-center p-4 bg-white rounded-lg border hover:shadow-md transition-shadow">
+                      <img 
+                        src={client.logo} 
+                        alt={client.name}
+                        className="max-w-full max-h-12 object-contain grayscale hover:grayscale-0 transition-all"
+                      />
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+            </Carousel>
           </div>
         </div>
       </section>
