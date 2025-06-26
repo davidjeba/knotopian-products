@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,19 +15,18 @@ const Index = () => {
   ];
 
   const knowallyFeatures = [
-    "Structured Learning Paths",
-    "Modular Content Creation", 
-    "Custom Branding & White-labeling",
-    "No Development Dependency",
-    "Custom Integrations (SSO, HRMS)"
+    "Structured Learning Paths: Open or sequential learning journeys—your call",
+    "Modular Content Creation: Intuitive tools to design microlearning, assessments, videos, simulations", 
+    "Custom Branding: White-labeled experience tailored to your org identity",
+    "No Dev Dependency: Get started instantly. No coding. No waiting",
+    "Custom Integrations: Need SSO? HRMS sync? Our team can tailor it for you"
   ];
 
   const industryCoursesFeatures = [
-    "Scenario-Based Content",
-    "Guided Compliance Modules",
-    "Role-Specific Simulations", 
-    "Modular Format Integration",
-    "Instant Enterprise Deployment"
+    "Scenario-Based Content: Role-specific simulations and decision-making frameworks",
+    "Guided Modules: For onboarding, compliance, SOPs, leadership, DEI, safety, and more",
+    "Modular Format: Use as-is, or plug into your own LMS", 
+    "Instant Deployment: Launch enterprise-grade training in days, not months"
   ];
 
   const knowallyClients = [
@@ -59,11 +59,8 @@ const Index = () => {
             Elevate Content. Empower Learning. <span className="text-blue-600">At Scale.</span>
           </h1>
           <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-            We're <strong>learning architects and domain specialists</strong> who have partnered with enterprises globally to design, deliver, and scale performance-driven learning systems. After solving content challenges across industries, we identified two fundamental gaps—<strong>structured delivery</strong> and <strong>readiness at scale</strong>.
+            Knotopian isn't just a content agency. We're <strong>learning architects and domain specialists</strong> who have partnered with enterprises across the globe to design, deliver, and scale performance-driven learning systems. After years of solving content challenges across industries, we identified two fundamental gaps—<strong>structured delivery</strong> and <strong>readiness at scale</strong>. The result? Two powerful products designed to solve them.
           </p>
-          <div className="bg-slate-900 text-white p-6 rounded-xl italic text-lg">
-            "Knotopian is not a software company. We are your extended L&D brain, building tools that multiply your training impact."
-          </div>
         </div>
 
         {/* Stats Section */}
@@ -83,25 +80,25 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <Badge className="mb-4 bg-green-100 text-green-800">Ready-to-Deploy LMS</Badge>
+              <Badge className="mb-4 bg-green-100 text-green-800">Ready-to-Deploy LMS Built by Experts</Badge>
               <h2 className="text-4xl font-bold mb-6 text-slate-900">
                 Knowally: <span className="text-green-600">Smart, Structured, and Streamlined</span>
               </h2>
               <p className="text-lg text-slate-600 mb-6">
-                <strong>Knowally</strong> is not just another LMS—it's the <strong>learning ecosystem you wish you built</strong>. Designed for organizations struggling with ad-hoc training delivery, chaotic content management, and limited tech bandwidth.
+                <strong>Knowally</strong> is not just another LMS—it's the <strong>learning ecosystem you wish you built</strong>. Designed for organizations struggling with ad-hoc training delivery, chaotic content management, and limited tech bandwidth, Knowally offers:
               </p>
               
-              <div className="space-y-3 mb-8">
+              <div className="space-y-4 mb-8">
                 {knowallyFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700">{feature}</span>
                   </div>
                 ))}
               </div>
 
               <div className="bg-green-50 p-6 rounded-lg mb-6">
-                <h4 className="font-semibold text-slate-900 mb-3">Perfect For:</h4>
+                <h4 className="font-semibold text-slate-900 mb-3">Who Needs It?</h4>
                 <ul className="space-y-2 text-slate-700">
                   <li>• SMBs lacking a dedicated L&D platform</li>
                   <li>• Enterprises with fragmented content delivery systems</li>
@@ -109,8 +106,17 @@ const Index = () => {
                 </ul>
               </div>
 
+              <div className="bg-green-100 p-6 rounded-lg mb-6">
+                <h4 className="font-semibold text-slate-900 mb-3">Why Choose Knowally?</h4>
+                <ul className="space-y-2 text-slate-700">
+                  <li>• Launch in &lt; 7 Days</li>
+                  <li>• Reduce content delivery cost by 30–40%</li>
+                  <li>• Increase training completion rates by up to 80%</li>
+                </ul>
+              </div>
+
               <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg">
-                Get Live Demo <ArrowRight className="ml-2 w-5 h-5" />
+                🔗 Get a live demo. Start training from Day 1 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
             
@@ -123,7 +129,7 @@ const Index = () => {
                 />
                 <div className="mt-6 grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-white rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">Less than 7 Days</div>
+                    <div className="text-2xl font-bold text-green-600">&lt; 7 Days</div>
                     <div className="text-sm text-slate-600">Launch Time</div>
                   </div>
                   <div className="text-center p-4 bg-white rounded-lg">
@@ -186,7 +192,7 @@ const Index = () => {
             </div>
 
             <div className="order-1 lg:order-2">
-              <Badge className="mb-4 bg-blue-100 text-blue-800">Expert-Curated Content</Badge>
+              <Badge className="mb-4 bg-blue-100 text-blue-800">The Fast-Track to Skill Deployment</Badge>
               <h2 className="text-4xl font-bold mb-6 text-slate-900">
                 Industry Ready Courses: <span className="text-blue-600">Built by SMEs. Ready for Action.</span>
               </h2>
@@ -194,17 +200,17 @@ const Index = () => {
                 From healthcare to IT, retail to manufacturing—<strong>Knotopian's Industry Ready Courses</strong> are pre-built, customizable content libraries curated by <strong>real subject matter experts</strong>. These are not generic templates; they're contextual, field-tested, and compliance-aligned.
               </p>
 
-              <div className="space-y-3 mb-8">
+              <div className="space-y-4 mb-8">
                 {industryCoursesFeatures.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0" />
+                  <div key={index} className="flex items-start gap-3">
+                    <CheckCircle className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
                     <span className="text-slate-700">{feature}</span>
                   </div>
                 ))}
               </div>
 
               <div className="bg-blue-50 p-6 rounded-lg mb-6">
-                <h4 className="font-semibold text-slate-900 mb-3">Ideal For:</h4>
+                <h4 className="font-semibold text-slate-900 mb-3">Who Needs It?</h4>
                 <ul className="space-y-2 text-slate-700">
                   <li>• Fast-growing teams needing scalable onboarding</li>
                   <li>• Regulated industries requiring compliance frameworks</li>
@@ -212,8 +218,17 @@ const Index = () => {
                 </ul>
               </div>
 
+              <div className="bg-blue-100 p-6 rounded-lg mb-6">
+                <h4 className="font-semibold text-slate-900 mb-3">Why It Matters</h4>
+                <ul className="space-y-2 text-slate-700">
+                  <li>• Saves 100s of content production hours</li>
+                  <li>• Reduces onboarding time by up to 60%</li>
+                  <li>• Improves knowledge retention and audit readiness</li>
+                </ul>
+              </div>
+
               <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
-                Explore Course Library <ArrowRight className="ml-2 w-5 h-5" />
+                🧩 Build your learning foundation in hours—not quarters <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
           </div>
@@ -245,12 +260,9 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-6 text-slate-900">Why Knotopian's Products Work</h2>
-            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Our products are <strong>not standalone tools</strong>—they're <strong>learning systems</strong> designed for outcome-driven training.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             <Card className="p-6 text-center hover:shadow-lg transition-shadow">
               <Target className="w-10 h-10 mx-auto mb-4 text-blue-600" />
               <h4 className="font-semibold mb-3 text-slate-900">Subject Matter Precision</h4>
@@ -260,30 +272,48 @@ const Index = () => {
             <Card className="p-6 text-center hover:shadow-lg transition-shadow">
               <Zap className="w-10 h-10 mx-auto mb-4 text-green-600" />
               <h4 className="font-semibold mb-3 text-slate-900">Platform + Content Synergy</h4>
-              <p className="text-slate-600 text-sm">Integrated learning systems designed for maximum training impact.</p>
+              <p className="text-slate-600 text-sm">Our products are <strong>not standalone tools</strong>—they're <strong>learning systems</strong> designed for outcome-driven training.</p>
             </Card>
 
             <Card className="p-6 text-center hover:shadow-lg transition-shadow">
               <Globe className="w-10 h-10 mx-auto mb-4 text-purple-600" />
               <h4 className="font-semibold mb-3 text-slate-900">Customizable at Core</h4>
-              <p className="text-slate-600 text-sm">Need multilingual? AR/VR-ready? Compliance integration? We've done it.</p>
+              <p className="text-slate-600 text-sm">Need to plug our frameworks into your compliance process? Need multilingual? AR/VR-ready? We've already done it.</p>
             </Card>
 
             <Card className="p-6 text-center hover:shadow-lg transition-shadow">
               <Users className="w-10 h-10 mx-auto mb-4 text-orange-600" />
               <h4 className="font-semibold mb-3 text-slate-900">Built for All Sizes</h4>
-              <p className="text-slate-600 text-sm">From 50-member startups to global enterprises—our solutions flex to fit.</p>
+              <p className="text-slate-600 text-sm">Whether you're a 50-member startup or a global enterprise, our solutions flex to fit.</p>
             </Card>
+          </div>
+
+          <div className="text-center">
+            <div className="bg-slate-900 text-white p-6 rounded-xl italic text-lg max-w-4xl mx-auto">
+              "Knotopian is not a software company. We are your extended L&D brain, building tools that multiply your training impact."
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Let's Talk Section */}
       <section className="bg-gradient-to-r from-slate-900 to-blue-900 py-16">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold mb-6 text-white">Let's Talk</h2>
           <p className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto">
-            Whether you're digitizing your L&D from scratch, wanting to skip years of trial-and-error content production, or just ready to scale with speed and precision.
+            Whether you're:
+          </p>
+          
+          <div className="mb-8 max-w-2xl mx-auto">
+            <ul className="text-lg text-slate-300 space-y-3">
+              <li>• Digitizing your L&D from scratch</li>
+              <li>• Wanting to skip years of trial-and-error content production</li>
+              <li>• Or just ready to scale with speed and precision</li>
+            </ul>
+          </div>
+
+          <p className="text-xl text-blue-300 mb-8">
+            📞 Connect with Knotopian. Let's build your training future.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -296,7 +326,6 @@ const Index = () => {
           </div>
 
           <div className="mt-12 text-center">
-            <p className="text-blue-300 text-lg mb-4">📞 Connect with Knotopian. Let's build your training future.</p>
             <Separator className="max-w-md mx-auto bg-slate-700" />
           </div>
         </div>
