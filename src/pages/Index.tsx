@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight, CheckCircle, Users, TrendingUp, Clock, Target, BookOpen, Zap, Shield, Globe } from "lucide-react";
@@ -105,7 +105,7 @@ const Index = () => {
                 />
                 <div className="mt-6 grid grid-cols-2 gap-4">
                   <div className="text-center p-4 bg-white rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">< 7 Days</div>
+                    <div className="text-2xl font-bold text-green-600">Less than 7 Days</div>
                     <div className="text-sm text-slate-600">Launch Time</div>
                   </div>
                   <div className="text-center p-4 bg-white rounded-lg">
