@@ -1,10 +1,11 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { ArrowRight, CheckCircle, Users, TrendingUp, Clock, Target, BookOpen, Zap, Shield, Globe } from "lucide-react";
+import { ArrowRight, CheckCircle, Users, TrendingUp, Clock, Target, BookOpen, Zap, Shield, Globe, Layers, Settings, Award } from "lucide-react";
 
 const Index = () => {
   const stats = [
@@ -47,7 +48,7 @@ const Index = () => {
     { name: "Banking Solutions", logo: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=120&h=60&fit=crop" }
   ];
 
-  const faqs = [
+  const knowallyFaqs = [
     {
       question: "What are the disadvantages of creating your own LMS?",
       answer: "Building your own LMS can cost $100K-500K+ and take 6-18 months to develop. You'll face ongoing maintenance costs, security vulnerabilities, compliance challenges, and the need for dedicated technical staff. Most organizations underestimate the complexity of user management, content delivery, reporting, and integrations—leading to budget overruns and delayed launches."
@@ -61,20 +62,27 @@ const Index = () => {
       answer: "Over 70% of custom LMS projects exceed budget and timeline due to scope creep, technical complexity, and changing requirements. Organizations often realize mid-development that they need features like SCORM compliance, mobile responsiveness, advanced analytics, and integration capabilities that weren't initially planned—leading to costly redesigns or complete project abandonment."
     },
     {
-      question: "How quickly can we migrate our existing training content to Knowally?",
-      answer: "Our migration team can transfer your existing content within 2-5 days, depending on volume and format. We support SCORM, xAPI, videos, PDFs, PPTs, and custom content. Our content conversion tools automatically optimize materials for mobile learning while preserving interactivity and tracking capabilities."
+      question: "How quickly can we get started with Knowally?",
+      answer: "With Knowally, you can launch your learning platform in under 7 days. Our ready-to-deploy system includes pre-built templates, content management tools, and seamless integrations. No technical setup required—just customize your branding and start uploading content immediately."
+    }
+  ];
+
+  const industryFaqs = [
+    {
+      question: "What happens when your in-house content development team leaves the company?",
+      answer: "This is a common nightmare scenario—custom content libraries become 'orphaned' when key team members leave, creating knowledge gaps, inconsistent quality, and development bottlenecks. With Industry Ready Courses, you get professionally curated content that's maintained and updated by our expert team, ensuring continuity regardless of internal changes."
     },
     {
-      question: "What happens when your in-house LMS developer leaves the company?",
-      answer: "This is a common nightmare scenario—custom LMS platforms become 'orphaned' when key developers leave, creating security risks, maintenance issues, and feature development bottlenecks. With Knowally, you get enterprise-grade support, regular updates, security patches, and a dedicated team ensuring continuous platform evolution without dependency on individual developers."
+      question: "How do Industry Ready Courses adapt to different company cultures?",
+      answer: "Our courses are built with modular frameworks that can be customized with your company's terminology, processes, and examples. You can add company-specific case studies, modify scenarios to match your industry context, and integrate your brand guidelines while maintaining the core learning objectives and compliance requirements."
     },
     {
-      question: "Can Knowally integrate with our existing HR and business systems?",
-      answer: "Yes, Knowally offers pre-built integrations with 50+ popular systems including Workday, BambooHR, Salesforce, Microsoft Teams, Slack, and Zoom. Our API allows custom integrations with proprietary systems. We also support SSO, automated user provisioning, and real-time data synchronization to eliminate duplicate data entry."
+      question: "How much does it really cost to create industry-specific training content from scratch?",
+      answer: "Creating comprehensive industry training typically costs $50K-200K per course when factoring in SME time, instructional design, multimedia production, and compliance validation. This doesn't include ongoing updates for regulatory changes. Industry Ready Courses provide the same quality at a fraction of the cost, with built-in maintenance and regular updates."
     },
     {
-      question: "How much does it really cost to maintain a custom LMS long-term?",
-      answer: "Beyond initial development costs, custom LMS maintenance typically runs $50K-150K annually for hosting, security updates, bug fixes, feature additions, and technical support. This doesn't include costs for compliance updates, mobile optimization, or scaling infrastructure. Knowally's subscription includes all maintenance, updates, security, and support—providing predictable costs and enterprise-grade reliability."
+      question: "Can we integrate Industry Ready Courses with our existing systems?",
+      answer: "Yes, our courses support SCORM, xAPI, and direct API integrations with 50+ popular LMS platforms including Workday, SAP SuccessFactors, and custom systems. We also provide migration assistance and can customize integration workflows to match your existing training processes and reporting requirements."
     }
   ];
 
@@ -152,22 +160,24 @@ const Index = () => {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-br from-green-100 to-blue-100 p-8 rounded-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&h=400&fit=crop" 
-                  alt="Knowally LMS Platform"
-                  className="w-full h-64 object-cover rounded-lg shadow-lg"
-                />
-                <div className="mt-6 grid grid-cols-2 gap-4">
-                  <div className="text-center p-4 bg-white rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">&lt; 7 Days</div>
-                    <div className="text-sm text-slate-600">Launch Time</div>
-                  </div>
-                  <div className="text-center p-4 bg-white rounded-lg">
-                    <div className="text-2xl font-bold text-green-600">80%</div>
-                    <div className="text-sm text-slate-600">Completion Rate</div>
-                  </div>
-                </div>
+              <div className="grid grid-cols-1 gap-6">
+                <Card className="p-6 bg-gradient-to-br from-green-100 to-blue-100">
+                  <Layers className="w-8 h-8 mb-4 text-green-600" />
+                  <h4 className="font-semibold mb-2 text-slate-900">Structured Learning Paths</h4>
+                  <p className="text-sm text-slate-600">Create open or sequential learning journeys that adapt to your organization's needs</p>
+                </Card>
+                
+                <Card className="p-6 bg-gradient-to-br from-blue-100 to-purple-100">
+                  <Settings className="w-8 h-8 mb-4 text-blue-600" />
+                  <h4 className="font-semibold mb-2 text-slate-900">No Dev Dependency</h4>
+                  <p className="text-sm text-slate-600">Get started instantly with no coding required—just customize and launch</p>
+                </Card>
+                
+                <Card className="p-6 bg-gradient-to-br from-purple-100 to-green-100">
+                  <Zap className="w-8 h-8 mb-4 text-purple-600" />
+                  <h4 className="font-semibold mb-2 text-slate-900">Launch in &lt; 7 Days</h4>
+                  <p className="text-sm text-slate-600">From setup to training delivery—get your team learning faster than ever</p>
+                </Card>
               </div>
             </div>
           </div>
@@ -191,6 +201,25 @@ const Index = () => {
               </CarouselContent>
             </Carousel>
           </div>
+
+          {/* Knowally FAQ Section */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-semibold text-center mb-8 text-slate-800">Frequently Asked Questions</h3>
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {knowallyFaqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`knowally-item-${index}`} className="border border-slate-200 rounded-lg px-6">
+                    <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-green-600">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-slate-700 leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -199,26 +228,24 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1 relative">
-              <div className="bg-gradient-to-br from-blue-100 to-purple-100 p-8 rounded-2xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop" 
-                  alt="Industry Ready Courses"
-                  className="w-full h-64 object-cover rounded-lg shadow-lg"
-                />
-                <div className="mt-6 grid grid-cols-3 gap-3">
-                  <div className="text-center p-3 bg-white rounded-lg">
-                    <Shield className="w-6 h-6 mx-auto mb-2 text-blue-600" />
-                    <div className="text-xs text-slate-600">Compliance Ready</div>
-                  </div>
-                  <div className="text-center p-3 bg-white rounded-lg">
-                    <Globe className="w-6 h-6 mx-auto mb-2 text-blue-600" />
-                    <div className="text-xs text-slate-600">Multi-Industry</div>
-                  </div>
-                  <div className="text-center p-3 bg-white rounded-lg">
-                    <BookOpen className="w-6 h-6 mx-auto mb-2 text-blue-600" />
-                    <div className="text-xs text-slate-600">Expert Curated</div>
-                  </div>
-                </div>
+              <div className="grid grid-cols-1 gap-6">
+                <Card className="p-6 bg-gradient-to-br from-blue-100 to-purple-100">
+                  <Shield className="w-8 h-8 mb-4 text-blue-600" />
+                  <h4 className="font-semibold mb-2 text-slate-900">Scenario-Based Content</h4>
+                  <p className="text-sm text-slate-600">Role-specific simulations and decision-making frameworks that mirror real workplace challenges</p>
+                </Card>
+                
+                <Card className="p-6 bg-gradient-to-br from-purple-100 to-orange-100">
+                  <BookOpen className="w-8 h-8 mb-4 text-purple-600" />
+                  <h4 className="font-semibold mb-2 text-slate-900">Expert Curated</h4>
+                  <p className="text-sm text-slate-600">Built by real subject matter experts, not generic templates—contextual and field-tested</p>
+                </Card>
+                
+                <Card className="p-6 bg-gradient-to-br from-orange-100 to-blue-100">
+                  <Award className="w-8 h-8 mb-4 text-orange-600" />
+                  <h4 className="font-semibold mb-2 text-slate-900">Instant Deployment</h4>
+                  <p className="text-sm text-slate-600">Launch enterprise-grade training in days, not months—ready when you are</p>
+                </Card>
               </div>
             </div>
 
@@ -283,32 +310,24 @@ const Index = () => {
               </CarouselContent>
             </Carousel>
           </div>
-        </div>
-      </section>
 
-      {/* FAQ Section */}
-      <section className="bg-white py-16">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6 text-slate-900">Frequently Asked Questions</h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-              Get answers to common questions about learning management systems and how Knowally can solve your training challenges.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border border-slate-200 rounded-lg px-6">
-                  <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-blue-600">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-slate-700 leading-relaxed">
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+          {/* Industry FAQ Section */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-semibold text-center mb-8 text-slate-800">Frequently Asked Questions</h3>
+            <div className="max-w-4xl mx-auto">
+              <Accordion type="single" collapsible className="space-y-4">
+                {industryFaqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`industry-item-${index}`} className="border border-slate-200 rounded-lg px-6">
+                    <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-blue-600">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="text-slate-700 leading-relaxed">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </div>
           </div>
         </div>
       </section>
