@@ -1,9 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { ArrowRight, CheckCircle, Users, TrendingUp, Clock, Target, BookOpen, Zap, Shield, Globe } from "lucide-react";
 
 const Index = () => {
@@ -45,6 +45,37 @@ const Index = () => {
     { name: "Energy Corp", logo: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=120&h=60&fit=crop" },
     { name: "Construction Plus", logo: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=120&h=60&fit=crop" },
     { name: "Banking Solutions", logo: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=120&h=60&fit=crop" }
+  ];
+
+  const faqs = [
+    {
+      question: "What are the disadvantages of creating your own LMS?",
+      answer: "Building your own LMS can cost $100K-500K+ and take 6-18 months to develop. You'll face ongoing maintenance costs, security vulnerabilities, compliance challenges, and the need for dedicated technical staff. Most organizations underestimate the complexity of user management, content delivery, reporting, and integrations—leading to budget overruns and delayed launches."
+    },
+    {
+      question: "How is Knowally platform flexible to be used by different departments?",
+      answer: "Knowally's modular architecture allows HR for onboarding, Sales for product training, Compliance for regulatory courses, and Operations for safety protocols—all within one platform. Each department gets customized dashboards, role-based permissions, and department-specific branding while maintaining centralized reporting and user management."
+    },
+    {
+      question: "Why do most custom LMS projects fail or get abandoned?",
+      answer: "Over 70% of custom LMS projects exceed budget and timeline due to scope creep, technical complexity, and changing requirements. Organizations often realize mid-development that they need features like SCORM compliance, mobile responsiveness, advanced analytics, and integration capabilities that weren't initially planned—leading to costly redesigns or complete project abandonment."
+    },
+    {
+      question: "How quickly can we migrate our existing training content to Knowally?",
+      answer: "Our migration team can transfer your existing content within 2-5 days, depending on volume and format. We support SCORM, xAPI, videos, PDFs, PPTs, and custom content. Our content conversion tools automatically optimize materials for mobile learning while preserving interactivity and tracking capabilities."
+    },
+    {
+      question: "What happens when your in-house LMS developer leaves the company?",
+      answer: "This is a common nightmare scenario—custom LMS platforms become 'orphaned' when key developers leave, creating security risks, maintenance issues, and feature development bottlenecks. With Knowally, you get enterprise-grade support, regular updates, security patches, and a dedicated team ensuring continuous platform evolution without dependency on individual developers."
+    },
+    {
+      question: "Can Knowally integrate with our existing HR and business systems?",
+      answer: "Yes, Knowally offers pre-built integrations with 50+ popular systems including Workday, BambooHR, Salesforce, Microsoft Teams, Slack, and Zoom. Our API allows custom integrations with proprietary systems. We also support SSO, automated user provisioning, and real-time data synchronization to eliminate duplicate data entry."
+    },
+    {
+      question: "How much does it really cost to maintain a custom LMS long-term?",
+      answer: "Beyond initial development costs, custom LMS maintenance typically runs $50K-150K annually for hosting, security updates, bug fixes, feature additions, and technical support. This doesn't include costs for compliance updates, mobile optimization, or scaling infrastructure. Knowally's subscription includes all maintenance, updates, security, and support—providing predictable costs and enterprise-grade reliability."
+    }
   ];
 
   return (
@@ -251,6 +282,33 @@ const Index = () => {
                 ))}
               </CarouselContent>
             </Carousel>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold mb-6 text-slate-900">Frequently Asked Questions</h2>
+            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+              Get answers to common questions about learning management systems and how Knowally can solve your training challenges.
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="border border-slate-200 rounded-lg px-6">
+                  <AccordionTrigger className="text-left font-semibold text-slate-900 hover:text-blue-600">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-slate-700 leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </div>
       </section>
