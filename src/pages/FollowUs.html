@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Follow Us - Knotopian</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .chip-tab {
+            transition: all 0.3s ease;
+            transform: scale(1);
+        }
+        .chip-tab:hover {
+            transform: scale(1.05);
+        }
+        .chip-tab.active {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px -8px rgba(0, 0, 0, 0.2);
+        }
+        .content-card {
+            transition: all 0.3s ease;
+        }
+        .content-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+        }
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.3s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">
+    <!-- Header Banner -->
+    <div class="bg-gradient-to-r from-green-600 via-blue-600 to-purple-600 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 flex items-center justify-center gap-3">
+                <svg class="h-12 w-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                </svg>
+                Follow Us 📱
+            </h1>
+            <p class="text-xl opacity-90 max-w-2xl mx-auto">
+                Stay connected with the latest insights, trends, and best practices in Learning Management Systems through our blog, podcast, and social media channels! 🚀
+            </p>
+        </div>
+    </div>
+
+    <!-- Chips UI Tabs -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="flex flex-wrap justify-center gap-4 mb-12">
+            <button onclick="showTab('all')" class="chip-tab active px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-medium shadow-lg flex items-center gap-3" id="tab-all">
+                <span class="text-lg">📱</span>
+                <span>All Content</span>
+                <span class="bg-white/20 px-3 py-1 rounded-full text-sm">8</span>
+            </button>
+            <button onclick="showTab('blog')" class="chip-tab px-8 py-4 bg-white border-2 border-gray-200 text-gray-700 rounded-full font-medium shadow-md hover:border-blue-300 hover:text-blue-600 flex items-center gap-3" id="tab-blog">
+                <span class="text-lg">📝</span>
+                <span>Blog</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">3</span>
+            </button>
+            <button onclick="showTab('podcast')" class="chip-tab px-8 py-4 bg-white border-2 border-gray-200 text-gray-700 rounded-full font-medium shadow-md hover:border-purple-300 hover:text-purple-600 flex items-center gap-3" id="tab-podcast">
+                <span class="text-lg">🎧</span>
+                <span>Podcast</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">2</span>
+            </button>
+            <button onclick="showTab('social')" class="chip-tab px-8 py-4 bg-white border-2 border-gray-200 text-gray-700 rounded-full font-medium shadow-md hover:border-pink-300 hover:text-pink-600 flex items-center gap-3" id="tab-social">
+                <span class="text-lg">🌟</span>
+                <span>Social</span>
+                <span class="bg-gray-100 px-3 py-1 rounded-full text-sm">3</span>
+            </button>
+        </div>
+
+        <!-- All Content Tab -->
+        <div id="content-all" class="tab-content active">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">
+                    📱 All Our Content
+                </h2>
+                <p class="text-gray-600">
+                    Discover all our latest content across blogs, podcasts, and social media! 🌟
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Blog Card 1 -->
+                <div class="content-card bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl">🏢</span>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+                            <span>📝</span>
+                            <span class="text-gray-700">Blog</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-3 text-gray-900">Skills Training: What It Is & How It Benefits Your Business</h3>
+                        <p class="text-gray-600 text-sm mb-4">Explore the future of learning with insights, trends, and best practices in Learning Management Systems</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-lg">👨‍💻</div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">Sudarshan Somanathan</p>
+                                    <p class="text-xs text-gray-500">Jan 15, 2024</p>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">17min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blog Card 2 -->
+                <div class="content-card bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="relative h-48 bg-gradient-to-br from-yellow-400 to-yellow-600 flex items-center justify-center">
+                        <span class="text-6xl">💻</span>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+                            <span>📝</span>
+                            <span class="text-gray-700">Blog</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-3 text-gray-900">15 Top LMS Features Your Learning Software Should Have</h3>
+                        <p class="text-gray-600 text-sm mb-4">Discover essential features that make learning management systems effective and engaging</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-lg">👩‍🎓</div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">Alex Johnson</p>
+                                    <p class="text-xs text-gray-500">Jan 10, 2024</p>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">12min read</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Podcast Card 1 -->
+                <div class="content-card bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <span class="text-6xl">🎧</span>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+                            <span>🎧</span>
+                            <span class="text-gray-700">Podcast</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-3 text-gray-900">The Future of Digital Learning</h3>
+                        <p class="text-gray-600 text-sm mb-4">Join us as we explore emerging trends in educational technology and digital transformation</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-lg">🎙️</div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">Maria Gomez</p>
+                                    <p class="text-xs text-gray-500">Jan 12, 2024</p>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">45min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Card 1 -->
+                <div class="content-card bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="relative h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center">
+                        <span class="text-6xl">📱</span>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-gray-700">LinkedIn</div>
+                        <div class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium flex items-center gap-1">
+                            <span>📱</span>
+                            <span class="text-gray-700">Social</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-3 text-gray-900">Latest Product Update on LinkedIn</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exciting new features announced! Check out our latest LMS capabilities and user feedback</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                            <div class="flex items-center gap-1">
+                                <span>👍</span>
+                                <span>245</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span>💬</span>
+                                <span>32</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-lg">🔗</div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-900">Knotopian Team</p>
+                                <p class="text-xs text-gray-500">Jan 14, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog Tab -->
+        <div id="content-blog" class="tab-content">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                    📝 Follow Our Blog
+                </h2>
+                <p class="text-gray-600">
+                    Explore the future of learning with insights, trends, and best practices in Learning Management Systems! 📚
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Blog cards will be filtered and shown here -->
+                <div class="content-card bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="relative h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <span class="text-6xl">🏢</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-3 text-gray-900">Skills Training: What It Is & How It Benefits Your Business</h3>
+                        <p class="text-gray-600 text-sm mb-4">Explore the future of learning with insights, trends, and best practices in Learning Management Systems</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-lg">👨‍💻</div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">Sudarshan Somanathan</p>
+                                    <p class="text-xs text-gray-500">Jan 15, 2024</p>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">17min read</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Podcast Tab -->
+        <div id="content-podcast" class="tab-content">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                    🎧 Follow Our Podcast
+                </h2>
+                <p class="text-gray-600">
+                    Listen to engaging conversations about education technology and learning innovation! 🎙️
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Podcast cards -->
+                <div class="content-card bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="relative h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <span class="text-6xl">🎧</span>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-3 text-gray-900">The Future of Digital Learning</h3>
+                        <p class="text-gray-600 text-sm mb-4">Join us as we explore emerging trends in educational technology and digital transformation</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-lg">🎙️</div>
+                                <div>
+                                    <p class="text-sm font-medium text-gray-900">Maria Gomez</p>
+                                    <p class="text-xs text-gray-500">Jan 12, 2024</p>
+                                </div>
+                            </div>
+                            <span class="text-xs text-gray-500">45min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Social Tab -->
+        <div id="content-social" class="tab-content">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-4 bg-gradient-to-r from-pink-600 to-orange-600 bg-clip-text text-transparent">
+                    🌟 Follow Our Social Media
+                </h2>
+                <p class="text-gray-600">
+                    Stay connected with our latest updates and behind-the-scenes content! 📱
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Social cards -->
+                <div class="content-card bg-white rounded-2xl overflow-hidden shadow-lg">
+                    <div class="relative h-48 bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center">
+                        <span class="text-6xl">📱</span>
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-medium text-gray-700">LinkedIn</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-bold mb-3 text-gray-900">Latest Product Update on LinkedIn</h3>
+                        <p class="text-gray-600 text-sm mb-4">Exciting new features announced! Check out our latest LMS capabilities and user feedback</p>
+                        <div class="flex items-center gap-4 mb-4 text-sm text-gray-500">
+                            <div class="flex items-center gap-1">
+                                <span>👍</span>
+                                <span>245</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <span>💬</span>
+                                <span>32</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 flex items-center justify-center text-lg">🔗</div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-900">Knotopian Team</p>
+                                <p class="text-xs text-gray-500">Jan 14, 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-gradient-to-r from-green-100 via-blue-100 to-purple-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6 bg-gradient-to-r from-green-600 to-purple-600 bg-clip-text text-transparent">
+                Stay Connected! 🌟
+            </h2>
+            <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+                Never miss an update! Subscribe to our newsletter and follow us on social media for the latest insights and trends.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="px-8 py-3 bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white rounded-lg font-medium flex items-center gap-2 transform hover:scale-105 transition-all shadow-lg">
+                    <span>📧</span>
+                    Subscribe Newsletter
+                </button>
+                <button class="px-8 py-3 border-2 border-blue-500 text-blue-600 hover:bg-blue-50 rounded-lg font-medium flex items-center gap-2 transform hover:scale-105 transition-all shadow-md">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
+                    </svg>
+                    Follow on Social
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-gray-900 via-blue-900 to-purple-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">🌟 Knotopian</h3>
+                    <p class="text-gray-300">
+                        Elevate Content. Empower Learning. At Scale. 🚀
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">📚 Products</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">📖 Knowally LMS</a></li>
+                        <li><a href="#" class="hover:text-white">🎓 Industry Ready Courses</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">🏢 Company</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white">ℹ️ About Us</a></li>
+                        <li><a href="#" class="hover:text-white">💼 Careers</a></li>
+                        <li><a href="#" class="hover:text-white">📝 Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">📞 Contact</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>✉️ hello@knotopian.com</li>
+                        <li>📞 +1 (555) 123-4567</li>
+                        <li>📍 San Francisco, CA</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Knotopian. All rights reserved. Made with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function showTab(tabName) {
+            // Hide all tab contents
+            const allContents = document.querySelectorAll('.tab-content');
+            allContents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Remove active state from all tabs
+            const allTabs = document.querySelectorAll('.chip-tab');
+            allTabs.forEach(tab => {
+                tab.classList.remove('active');
+                tab.classList.remove('bg-gradient-to-r', 'from-blue-500', 'to-purple-500', 'text-white');
+                tab.classList.add('bg-white', 'border-2', 'border-gray-200', 'text-gray-700');
+            });
+
+            // Show selected tab content
+            document.getElementById('content-' + tabName).classList.add('active');
+
+            // Add active state to selected tab
+            const activeTab = document.getElementById('tab-' + tabName);
+            activeTab.classList.add('active');
+            activeTab.classList.remove('bg-white', 'border-2', 'border-gray-200', 'text-gray-700');
+            activeTab.classList.add('bg-gradient-to-r', 'from-blue-500', 'to-purple-500', 'text-white');
+        }
+    </script>
+</body>
+</html>
