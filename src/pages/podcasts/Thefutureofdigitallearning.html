@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Future of Digital Learning - Knotopian Podcast</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .audio-player {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .waveform {
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><rect x="2" y="8" width="2" height="4" fill="white" opacity="0.3"/><rect x="6" y="5" width="2" height="10" fill="white" opacity="0.5"/><rect x="10" y="3" width="2" height="14" fill="white" opacity="0.7"/><rect x="14" y="7" width="2" height="6" fill="white" opacity="0.4"/><rect x="18" y="2" width="2" height="16" fill="white" opacity="0.8"/></svg>') repeat-x;
+            height: 20px;
+        }
+        .pulse-ring {
+            animation: pulse-ring 1.25s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(0.33); }
+            80%, 100% { opacity: 0; }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white min-h-screen">
+    <!-- Header -->
+    <header class="bg-black/20 backdrop-blur-sm border-b border-white/10">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-4">
+                    <a href="/" class="text-2xl font-bold text-white">🌟 Knotopian</a>
+                    <span class="text-white/30">|</span>
+                    <span class="text-white/80">Podcast</span>
+                </div>
+                <nav class="flex items-center gap-6">
+                    <a href="/followus" class="text-white/80 hover:text-white">Follow Us</a>
+                    <a href="/about-us" class="text-white/80 hover:text-white">About</a>
+                    <a href="/contact-us" class="text-white/80 hover:text-white">Contact</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <!-- Breadcrumb -->
+                <nav class="text-sm text-white/60 mb-6">
+                    <a href="/" class="hover:text-white">Home</a> > 
+                    <a href="/followus" class="hover:text-white">Podcast</a> > 
+                    <span class="text-white">The Future of Digital Learning</span>
+                </nav>
+
+                <!-- Podcast Badge -->
+                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-violet-500 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                    🎧 PODCAST EPISODE #42
+                </div>
+
+                <!-- Title -->
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-violet-400 to-pink-400 bg-clip-text text-transparent">
+                    The Future of Digital Learning
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">
+                    Join us as we explore emerging trends in educational technology and digital transformation with industry experts.
+                </p>
+
+                <!-- Episode Info -->
+                <div class="flex flex-wrap justify-center gap-6 text-white/70 mb-12">
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>45 minutes</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                        <span>January 12, 2024</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span>Season 3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audio Player Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <!-- Main Audio Player -->
+                <div class="audio-player rounded-2xl p-8 mb-8 shadow-2xl">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-4">
+                            <div class="relative">
+                                <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-2xl pulse-ring">
+                                    ▶️
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Now Playing</h3>
+                                <p class="text-white/80">The Future of Digital Learning</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-2xl font-bold">45:32</div>
+                            <div class="text-white/70 text-sm">Total Duration</div>
+                        </div>
+                    </div>
+
+                    <!-- Waveform Visualization -->
+                    <div class="bg-white/10 rounded-lg p-4 mb-6">
+                        <div class="waveform h-20 rounded"></div>
+                        <div class="flex justify-between text-sm text-white/60 mt-2">
+                            <span>00:00</span>
+                            <span>45:32</span>
+                        </div>
+                    </div>
+
+                    <!-- Player Controls -->
+                    <div class="flex items-center justify-center gap-6">
+                        <button class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                            ⏮️
+                        </button>
+                        <button class="w-16 h-16 bg-white rounded-full flex items-center justify-center text-purple-600 text-2xl hover:scale-105 transition-transform">
+                            ▶️
+                        </button>
+                        <button class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center hover:bg-white/30 transition-colors">
+                            ⏭️
+                        </button>
+                        <div class="flex items-center gap-2 ml-6">
+                            <span class="text-sm">🔊</span>
+                            <div class="w-24 h-2 bg-white/20 rounded-full">
+                                <div class="w-16 h-2 bg-white rounded-full"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listen Platforms -->
+                <div class="grid md:grid-cols-4 gap-4 mb-12">
+                    <a href="#" class="bg-green-600 hover:bg-green-700 p-4 rounded-xl flex items-center gap-3 transition-colors">
+                        <span class="text-2xl">🎵</span>
+                        <span class="font-medium">Spotify</span>
+                    </a>
+                    <a href="#" class="bg-purple-600 hover:bg-purple-700 p-4 rounded-xl flex items-center gap-3 transition-colors">
+                        <span class="text-2xl">🎧</span>
+                        <span class="font-medium">Apple Podcasts</span>
+                    </a>
+                    <a href="#" class="bg-orange-600 hover:bg-orange-700 p-4 rounded-xl flex items-center gap-3 transition-colors">
+                        <span class="text-2xl">📻</span>
+                        <span class="font-medium">Google Podcasts</span>
+                    </a>
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 p-4 rounded-xl flex items-center gap-3 transition-colors">
+                        <span class="text-2xl">🎙️</span>
+                        <span class="font-medium">YouTube</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Episode Content -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-3 gap-12">
+                    <!-- Main Content -->
+                    <div class="md:col-span-2">
+                        <!-- Host Info -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 mb-8">
+                            <h3 class="text-xl font-bold mb-4">🎙️ Your Host</h3>
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-violet-500 rounded-full flex items-center justify-center text-2xl">
+                                    🎙️
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-lg">Maria Gomez</h4>
+                                    <p class="text-white/70">Senior Education Technology Researcher</p>
+                                    <p class="text-white/60 text-sm">10+ years in EdTech innovation</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Episode Description -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 mb-8">
+                            <h3 class="text-xl font-bold mb-4">📝 Episode Summary</h3>
+                            <p class="text-white/80 leading-relaxed mb-4">
+                                In this thought-provoking episode, we dive deep into the rapidly evolving landscape of digital learning. Our conversation explores how artificial intelligence, virtual reality, and adaptive learning technologies are reshaping education across industries.
+                            </p>
+                            <p class="text-white/80 leading-relaxed mb-4">
+                                We discuss the challenges and opportunities facing educational institutions, corporate training programs, and individual learners as they navigate this digital transformation.
+                            </p>
+                            <p class="text-white/80 leading-relaxed">
+                                Join us for insights from leading experts, real-world case studies, and practical advice for implementing cutting-edge learning solutions in your organization.
+                            </p>
+                        </div>
+
+                        <!-- Key Topics -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6 mb-8">
+                            <h3 class="text-xl font-bold mb-4">🎯 Key Topics Covered</h3>
+                            <ul class="space-y-3">
+                                <li class="flex items-start gap-3">
+                                    <span class="text-cyan-400 mt-1">•</span>
+                                    <span class="text-white/80">AI-powered personalized learning experiences</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-violet-400 mt-1">•</span>
+                                    <span class="text-white/80">Virtual and augmented reality in education</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-pink-400 mt-1">•</span>
+                                    <span class="text-white/80">Microlearning and mobile-first approaches</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-green-400 mt-1">•</span>
+                                    <span class="text-white/80">Data analytics for learning optimization</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <span class="text-yellow-400 mt-1">•</span>
+                                    <span class="text-white/80">Future of corporate training programs</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Quotes -->
+                        <div class="bg-gradient-to-r from-cyan-500/20 to-violet-500/20 border border-cyan-500/30 rounded-xl p-6 mb-8">
+                            <h3 class="text-xl font-bold mb-4">💬 Key Insights</h3>
+                            <blockquote class="text-lg italic text-white/90 mb-4">
+                                "The future of learning isn't about replacing human connection—it's about enhancing it through technology that adapts to individual needs and learning styles."
+                            </blockquote>
+                            <p class="text-cyan-400 font-medium">— Dr. Sarah Chen, AI Learning Researcher</p>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar -->
+                    <div class="space-y-8">
+                        <!-- Related Episodes -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">🎧 Related Episodes</h3>
+                            <div class="space-y-4">
+                                <a href="#" class="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                                    <h4 class="font-medium mb-1">Building Learning Communities</h4>
+                                    <p class="text-white/60 text-sm">Episode #41 • 38 min</p>
+                                </a>
+                                <a href="#" class="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                                    <h4 class="font-medium mb-1">AI in Education</h4>
+                                    <p class="text-white/60 text-sm">Episode #40 • 42 min</p>
+                                </a>
+                                <a href="#" class="block p-4 bg-white/5 rounded-lg hover:bg-white/10 transition-colors">
+                                    <h4 class="font-medium mb-1">Remote Learning Revolution</h4>
+                                    <p class="text-white/60 text-sm">Episode #39 • 35 min</p>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Subscribe -->
+                        <div class="bg-gradient-to-br from-pink-500/20 to-violet-500/20 border border-pink-500/30 rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">🔔 Never Miss an Episode</h3>
+                            <p class="text-white/80 mb-4">Subscribe to get notified about new episodes and exclusive content.</p>
+                            <button class="w-full bg-gradient-to-r from-pink-500 to-violet-500 hover:from-pink-600 hover:to-violet-600 px-6 py-3 rounded-lg font-medium transition-colors">
+                                Subscribe Now
+                            </button>
+                        </div>
+
+                        <!-- Sponsors -->
+                        <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6">
+                            <h3 class="text-lg font-bold mb-4">🤝 Episode Sponsors</h3>
+                            <div class="space-y-4 text-center">
+                                <div class="p-4 bg-white/5 rounded-lg">
+                                    <div class="text-2xl mb-2">🌟</div>
+                                    <p class="font-medium">Knotopian LMS</p>
+                                    <p class="text-white/60 text-sm">Empowering Learning</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comments Section -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-white/5 backdrop-blur-sm rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-6">💬 Join the Conversation</h3>
+                    <div class="space-y-4">
+                        <div class="p-4 bg-white/5 rounded-lg">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-sm">👨‍💻</div>
+                                <span class="font-medium">Alex Thompson</span>
+                                <span class="text-white/60 text-sm">2 hours ago</span>
+                            </div>
+                            <p class="text-white/80">Fantastic episode! The insights about AI-powered learning were particularly enlightening. Can't wait for the next one!</p>
+                        </div>
+                        <div class="p-4 bg-white/5 rounded-lg">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="w-8 h-8 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center text-sm">👩‍🎓</div>
+                                <span class="font-medium">Sarah Chen</span>
+                                <span class="text-white/60 text-sm">5 hours ago</span>
+                            </div>
+                            <p class="text-white/80">As an educator, this episode gave me so many ideas for implementing new technologies in my classroom. Thank you!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/40 backdrop-blur-sm py-12 border-t border-white/10">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-white/60">&copy; 2024 Knotopian Podcast. All rights reserved. Made with ❤️</p>
+        </div>
+    </footer>
+</body>
+</html>
